@@ -29,13 +29,13 @@ public class ArrayUtilsTest {
         assertEquals(0, ArrayUtils.findLast(new int[] { 2, 3, 5 }, 2));
     }
 
-//    @Test
-//    public void testOddOrPosNull() {
-//        // Do not execute fault
-//        assertThrows(NullPointerException.class, () -> {
-//            ArrayUtils.oddOrPos(null);
-//        });
-//    }
+    @Test
+    public void testOddOrPosNull() {
+        // Do not execute fault
+        assertThrows(NullPointerException.class, () -> {
+            ArrayUtils.oddOrPos(null);
+        });
+    }
 
     @Test
     public void testOddOrPosAllPositives() {
@@ -58,4 +58,17 @@ public class ArrayUtilsTest {
     }
 
     @Test
+    public void testCountOfEmptyArray() {
+        assertEquals(0, ArrayUtils.countOf(new int[] {}, 3));
+    }
+
+    @Test
+    public void testCountOfNonExistent() {
+        assertEquals(0, ArrayUtils.countOf(new int[] { 1, 2 }, 3));
+    }
+
+    @Test
+    public void testCountOfExistsFirstElement() {
+        assertEquals(1, ArrayUtils.countOf(new int[] { 2, 3, 5 }, 2));
+    }
 }
