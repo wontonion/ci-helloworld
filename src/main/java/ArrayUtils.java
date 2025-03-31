@@ -35,6 +35,9 @@ public class ArrayUtils {
         }
         return count;
     }
+
+
+    // new method
     public static int countOf(int[] x, int target) {
         int count = 0;
         for (int a: x) {
